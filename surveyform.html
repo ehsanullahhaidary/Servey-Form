@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>freeCodeCamp Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- getting tha Poppins font from bellow link -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- container class is the box for header and dark blue thing (form) -->
+    <div class="container">
+      <!-- header on top of page with title and a description -->
+      <header class="header">
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
+      <!-- simple form with many inputs -->
+      <form id="survey-form">
+        <!-- input-div class is the outer box for styling any input  -->
+        <div class="input-div">
+          <!-- users name input -->
+          <label for="name" id="name-label">Name</label
+          ><input
+            type="text"
+            name="name"
+            id="name"
+            class="input-white-round-style"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="input-div">
+          <!-- users email input -->
+          <label for="email" id="email-label">Email</label
+          ><input
+            type="email"
+            name="email"
+            id="email"
+            class="input-white-round-style"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="input-div">
+          <!-- users age input -->
+          <label for="age" id="number-label"
+            >Age<span class="small-text">(optional)</span></label
+          ><input
+            type="number"
+            name="age"
+            id="number"
+            class="input-white-round-style"
+            placeholder="Age"
+            min="10"
+            max="99"
+          />
+        </div>
+        <div class="input-div">
+          <p>Which option best describes your current role?</p>
+          <!-- select option menue for users current role -->
+          <select
+            name="role"
+            id="dropdown"
+            class="select-control input-white-round-style"
+            required
+          >
+            <option value disabled selected>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time job</option>
+            <option value="learner">Full Time learner</option>
+            <option value="preferNot">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="input-div">
+          <p>Would you recommend freeCodeCamp to a friend?</p>
+          <!-- three radio buttons for friend recommendation of FCC -->
+          <label
+            ><input
+              name="user-recommend"
+              type="radio"
+              value="definitely"
+              class="input-radio"
+              checked
+            />Definitely</label
+          >
+          <label
+            ><input
+              name="user-recommend"
+              type="radio"
+              value="maybe"
+              class="input-radio"
+            />Maybe</label
+          >
+          <label
+            ><input
+              name="user-recommend"
+              type="radio"
+              class="input-radio"
+              value="notSure"
+            />Not sure</label
+          >
+        </div>
+        <div class="input-div">
+          <p>What is your favorite feature of freeCodeCamp?</p>
+          <!-- a select option menue to get the favorite part of FCC users -->
+          <select
+            name="favoriteFeature"
+            id="favoriteFeature"
+            class="select-control input-white-round-style"
+            required
+          >
+            <option value disabled selected>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+        </div>
+        <div class="input-div">
+          <p>
+            What would you like to see improved?<span class="small-text"
+              >(Check all that apply)</span
+            >
+          </p>
+          <!-- 11 checkboxes for improvment of freecodecamp -->
+          <label
+            ><input
+              name="improved"
+              value="front-end-projects"
+              type="checkbox"
+              class="improved-checkbox"
+            />Front-end Projects</label
+          >
+          <label
+            ><input
+              name="improved"
+              value="back-end-projects"
+              type="checkbox"
+              class="improved-checkbox"
+            />Back-end Projects</label
+          >
+          <label
+            ><input
+              name="improved"
+              value="data-visualization"
+              type="checkbox"
+              class="improved-checkbox"
+            />Data Visualization</label
+          >
+          <label
+            ><input
+              name="improved"
+              value="challenges"
+              type="checkbox"
+              class="improved-checkbox"
+            />Challenges</label
+          >
+          <label
+            ><input
+              name="improved"
+              value="open-source-community"
+              type="checkbox"
+              class="improved-checkbox"
+            />Open Source Community</label
+          >
+          <label
+            ><input
+              name="improved"
+              value="gitter-help-rooms"
+              type="checkbox"
+              class="improved-checkbox"
+            />Gitter help rooms</label
+          >
+          <label
+            ><input
+              name="improved"
+              value="videos"
+              type="checkbox"
+              class="improved-checkbox"
+            />Videos</label
+          >
+          <label
+            ><input
+              name="improved"
+              value="city-meetups"
+              type="checkbox"
+              class="improved-checkbox"
+            />City Meetups</label
+          >
+          <label
+            ><input
+              name="improved"
+              value="wiki"
+              type="checkbox"
+              class="improved-checkbox"
+            />Wiki</label
+          >
+          <label
+            ><input
+              name="improved"
+              value="forum"
+              type="checkbox"
+              class="improved-checkbox"
+            />Forum</label
+          >
+          <label
+            ><input
+              name="improved"
+              value="additional-courses"
+              type="checkbox"
+              class="improved-checkbox"
+            />Additional Courses</label
+          >
+        </div>
+        <div class="input-div">
+          <p>Any comments or suggestions?</p>
+          <!-- this textarea will be styled and shaped in css -->
+          <textarea
+            name="textarea"
+            id="comments"
+            class="textarea"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+        <div class="input-div">
+          <!-- the form submit button -->
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

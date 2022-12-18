@@ -1,0 +1,194 @@
+/* project base colors */
+:root {
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+}
+
+/* Reset and Remove Inherited Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* removing margins and setting fonts and main settings */
+body {
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-white);
+    margin: 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+/* body::-webkit-scrollbar {
+    display: none;
+} */
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    /* -ms-overflow-style: none; */
+    /* IE and Edge */
+    /* scrollbar-width: none; */
+    /* Firefox */
+}
+
+/* -styling the background picture and color of page
+   -height and width
+   - position of picture and color (body) to be fixed*/
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)),
+        url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* form and header container */
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 3.125rem auto 0 auto;
+    max-width: 720px;
+}
+
+/* media setting container to 540px whene page is 576px */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* media hidding scrollbar whene page is up to 768px */
+@media (max-width: 768px) {
+    body::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* media changes container to 720px when page is more than 768px */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+}
+
+
+/* header for the pages title and description */
+header {
+    margin-bottom: 1.875rem;
+    padding: 0 0.625rem;
+}
+
+/* pages title */
+/* centered the title */
+#title {
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* pages description */
+/* centered it and setting style */
+#description {
+    text-align: center;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 1.125rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* form with dark background */
+form {
+    background: var(--color-darkblue-alpha);
+    padding: 2.5rem 1.5rem;
+    border-radius: 0.25rem;
+    font-size: large;
+}
+
+/* the box for any input */
+.input-div {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.50rem;
+}
+
+/* inputs label */
+label {
+    display: flex;
+    align-items: center;
+}
+
+/* round borderring the inputs */
+.input-white-round-style {
+    border: none;
+    width: 100%;
+    height: 2.50rem;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* a little margin between radios/checkboxes and its text */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* some inputs have descriptive text with smaller font */
+.small-text {
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+/* textarea with just verticall resizing */
+textarea {
+    width: 100%;
+    height: 90px;
+    border-radius: 2px;
+    resize: vertical;
+}
+
+/* form submit button */
+#submit {
+    border: none;
+    border-radius: 3px;
+    background-color: var(--color-green);
+    color: white;
+    width: 100%;
+    height: 50px;
+    font-size: large;
+    margin: 0 auto;
+}
+
+/* last div = submit buttons div */
+.input-div:last-of-type {
+    display: flex;
+    width: 100%;
+}
+
+/* select menue options */
+select {
+    color: darkslategray;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+}
